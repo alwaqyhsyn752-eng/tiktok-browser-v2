@@ -22,6 +22,9 @@ jobs:
           pip install --upgrade pip
           pip install buildozer cython==0.29.36 virtualenv
       - name: Build APK
+        env:
+          USE_SDL2_MIXER: "1"
+          THORVG_LOTTIE: "0"
         run: |
           export PATH=$PATH:$HOME/.local/bin
           buildozer -v android debug

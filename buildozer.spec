@@ -10,8 +10,16 @@ orientation = portrait
 android.permissions = INTERNET,ACCESS_NETWORK_STATE
 android.api = 33
 android.minapi = 24
-android.ndk = 23c
+android.ndk = 25b
 android.archs = arm64-v8a,armeabi-v7a
 android.allow_backup = True
 android.accept_sdk_license = True
 p4a.branch = master
+
+# Disable thorvg Lottie loader (causes build failure on p4a master)
+android.gradle_dependencies = 
+android.add_jars = 
+android.add_src = 
+android.add_assets = 
+android.add_resources = 
+android.p4a_whitelist = 
