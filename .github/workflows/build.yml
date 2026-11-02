@@ -25,17 +25,17 @@ jobs:
           path: |
             ~/.buildozer
             .buildozer
-          key: buildozer-v3-${{ hashFiles('buildozer.spec') }}
-          restore-keys: buildozer-v3-
+          key: bz-1-${{ hashFiles('buildozer.spec') }}
+          restore-keys: bz-1-
 
-      - name: Install buildozer + latest tools
+      - name: Install buildozer
         run: |
           sudo apt-get update
           sudo apt-get install -y git zip unzip autoconf automake libtool \
             pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 \
             cmake libffi-dev libssl-dev
           python -m pip install --upgrade pip
-          pip install buildozer==1.5.0 cython==3.0.11 virtualenv
+          pip install buildozer==1.5.0 cython==0.29.36 virtualenv
 
       - name: Build APK
         env:
