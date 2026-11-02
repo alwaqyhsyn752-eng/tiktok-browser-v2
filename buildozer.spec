@@ -5,21 +5,16 @@ package.domain = com.alpha.tiktok
 source.dir = .
 source.include_exts = py,kv,json,png,jpg
 version = 1.0.0
-requirements = python3,kivy==2.3.0,pyjnius,android
+requirements = python3==3.11.9,kivy==2.3.1,pyjnius==1.6.1,android
 orientation = portrait
 android.permissions = INTERNET,ACCESS_NETWORK_STATE
-android.api = 33
+android.api = 34
 android.minapi = 24
-android.ndk = 25b
+android.ndk = 27c
 android.archs = arm64-v8a,armeabi-v7a
 android.allow_backup = True
 android.accept_sdk_license = True
+android.accept_android_license = True
+android.enable_androidx = True
+android.gradle_dependencies = androidx.core:core:1.13.1
 p4a.branch = master
-
-# Disable thorvg Lottie loader (causes build failure on p4a master)
-android.gradle_dependencies = 
-android.add_jars = 
-android.add_src = 
-android.add_assets = 
-android.add_resources = 
-android.p4a_whitelist = 
